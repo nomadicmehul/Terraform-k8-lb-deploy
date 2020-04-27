@@ -1,9 +1,9 @@
 variable "region" {
-  default = "asia-east1"
+  default = "asia-east1" // Set as per your nearest location or preference 
 }
 
 variable "location" {
-  default = "asia-east1-b"
+  default = "asia-east1-b"  // Set as per your nearest location or preference 
 }
 
 variable "network_name" {
@@ -21,7 +21,7 @@ resource "google_compute_network" "default" {
 
 resource "google_compute_subnetwork" "default" {
   name                     = var.network_name
-  ip_cidr_range            = "10.127.0.0/20"
+  ip_cidr_range            = "10.140.0.0/20"  // Change as per your region/zone
   network                  = google_compute_network.default.self_link
   region                   = var.region
   private_ip_google_access = true
