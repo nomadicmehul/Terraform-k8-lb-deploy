@@ -1,5 +1,5 @@
 variable "region" {
-  default = "asia-east1-b"
+  default = "asia-east1"
 }
 
 variable "location" {
